@@ -1,9 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
 // RUTAS
+
 import { AppRoutingModule } from './app.routes';
 
+// SERVICIOS
 
+import { HeroesService } from './services/heroes.service';
 
 
 // COMPONENTES
@@ -27,7 +31,9 @@ import { PageNotFoundComponent } from './components/shared/page-not-found/page-n
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    HeroesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
